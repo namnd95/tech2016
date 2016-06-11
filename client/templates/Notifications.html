@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notification</title>
+  <base href="/"/>
+</head>
+
+
+<body>
+
+<div class="nf-body-container">
+  <!-- NavBar -->
+  <div ui-view='nav-bar'></div>
+  <!--NewsFeed -->
+  <div class="noti-content-container">
+    <div class="row">
+      <div class="col-md-2 noti-left-menu">
+        <div class="list-group">
+          <a href="#" class="list-group-item disabled">
+            Notifications:
+          </a>
+          <a href="#" class="list-group-item">All</a>
+          <!-- <a href="#" class="list-group-item">Comments</a>
+          <a href="#" class="list-group-item">Answers</a>
+          <a href="#" class="list-group-item">Upvotes</a> -->
+        </div>
+      </div>
+      <div class="col-md-8 noti-main">
+        <div class="noti-container">
+
+          <div ng-repeat = "noti in vm.notis">
+            <div  class="row notification-container">
+              <div class = "col-md-1">
+                <div ng-if = "noti.read === false">
+                  <i class="fa fa-circle" aria-hidden="true" style="color:#2b6dad"></i>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <img class = "post-avatar" height = "42" width = "42" margin = "center" src="{{noti.notification.created_by.avatar}}">
+              </div>
+              <div class="col-md-9">
+                <div class="notification-content">
+                  <a class = "notification-user" href="#LinkToUserProfile"><b>{{noti.notification.created_by.user.username}}</b></a>
+                  {{noti.content}}
+                  <a class = "notification-question" ng-click = "vm.redirectToQuestion(noti.notification.question.id, noti.id)">
+                    <b>{{noti.notification.question.question}}</b>
+                  </a>
+                  <!-- <div class="notification-date">25/5</div> -->
+                </div>
+              </div>
+            </div>
+            <hr>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="col-md-2 nf-right-menu">
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>

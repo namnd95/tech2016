@@ -1,0 +1,28 @@
+.nf-content-container {
+    margin: 0 20% 0 20%;
+}
+.nf-left-menu {}
+.nf-main {}
+.nf-right-menu {}
+
+.post-title {}
+.post-title>a {
+    color: black;
+}
+.post-author {}
+.post-content {}
+.post-footer {
+    margin-top: 1em;
+}
+.post-other-buttons {
+    color: black;
+    margin-left: 0.5em;
+}
+.post-datetime {
+    margin-top: 0.4em;
+    text-align: right;
+}
+.label-default {
+  background-color: #f2f2f2;
+  color: #3a3a3a;
+}

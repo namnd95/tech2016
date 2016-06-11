@@ -1,0 +1,57 @@
+{% load compress %}
+{% load staticfiles %}
+
+{% compress js %}
+
+<script type="text/javascript" src="{% static 'static/bower_components/angular/angular.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'static/bower_components/angular-cookies/angular-cookies.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'static/bower_components/angular-ui-router/release/angular-ui-router.min.js' %}"></script>
+
+<script src="client/static/bower_components/jquery/jquery-2.2.4.min.js"></script>
+<script src="client/static/bower_components/bootstrap/js/bootstrap.js"></script>
+<script src="client/static/bower_components/bootstrap3-typeahead/bootstrap3-typeahead.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.js"></script>
+
+<script src="client/static/bower_components/ng-dialog/js/ngDialog.js"></script>
+
+<script type="text/javascript" src="{% static 'javascripts/tech2016.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/tech2016.config.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/tech2016.routes.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'javascripts/main/main.module.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/main/controllers/main.controller.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'javascripts/newsfeed.controller.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/navbar.controller.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'javascripts/users/users.module.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/users/services/users.service.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/users/controllers/register.controller.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/users/controllers/login.controller.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'javascripts/profile/profile.module.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/profile/services/profile.service.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/profile/controllers/profile.controller.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'javascripts/question/question.module.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/question/controllers/question.controller.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'javascripts/notification/notification.module.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/notification/controllers/notification.controller.js' %}"></script>
+
+{% endcompress %}
+
+{% compress css %}
+
+<link rel="stylesheet" type="text/css" href="client/static/bower_components/ng-dialog/css/ngDialog.css">
+<link rel="stylesheet" type="text/css" href="client/static/bower_components/ng-dialog/css/ngDialog-theme-default.css">
+<link rel="stylesheet" type="text/css" href="client/static/bower_components/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="client/static/bower_components/font-awesome/css/font-awesome.css">
+
+<link rel="stylesheet" type="text/css" href="client/static/css/NewsFeed.css">
+<link rel="stylesheet" type="text/css" href="client/static/css/NavBar.css">
+<link rel="stylesheet" type="text/css" href="client/static/css/Question.css">
+<link rel="stylesheet" type="text/css" href="client/static/css/Notification.css">
+<link rel="stylesheet" type="text/css" href="client/static/css/Profile.css">
+
+{% endcompress %}
