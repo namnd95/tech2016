@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 from topics.views import TopicView, TopicDetailView
 from questions.views import QuestionView, QuestionDetailView
 from questions.views import QuestionTopicView, TopicQuestionView
@@ -28,7 +30,7 @@ from posts.views import PostDetailView, FollowPostView
 from notifications.views import ReadView
 from A2A.views import IndexView
 
-urlpatterns = [
+urlpatterns = static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + [
     # User views
     url(r'^api/v1/account/avatar/(?P<username>.+)/$', AvatarView.as_view()),
     url(r'^api/v1/accounts/(?P<username>.+)/$', UserDetailView.as_view(),
